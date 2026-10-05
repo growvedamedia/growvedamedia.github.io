@@ -154,7 +154,7 @@
         .stat-item h3 { font-size: 42px; font-weight: 800; color: var(--accent); margin-bottom: 5px; }
         .stat-item p { font-size: 15px; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Services Section (With Images) */
+        /* Services Section */
         .services { background: var(--bg-light); }
         .services-grid {
             display: grid;
@@ -193,10 +193,7 @@
             transform: scale(1.05);
         }
 
-        .service-content {
-            padding: 30px;
-        }
-
+        .service-content { padding: 30px; }
         .service-card h3 { font-size: 22px; color: var(--primary); margin-bottom: 15px; font-weight: 700; }
         .service-card p { color: #64748b; margin-bottom: 20px; font-size: 15px; }
         
@@ -244,10 +241,7 @@
         /* FAQ Section */
         .faq { background: #ffffff; }
         .faq-container { max-width: 800px; margin: auto; }
-        .faq-item {
-            border-bottom: 1px solid var(--card-border);
-            padding: 25px 0;
-        }
+        .faq-item { border-bottom: 1px solid var(--card-border); padding: 25px 0; }
         .faq-item h3 { font-size: 20px; color: var(--primary); margin-bottom: 10px; cursor: pointer; }
         .faq-item p { color: #64748b; font-size: 16px; }
 
@@ -279,6 +273,37 @@
             border-color: var(--accent);
         }
 
+        /* Floating WhatsApp Button Style */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128c7e;
+        }
+
+        .whatsapp-icon-svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
         /* Footer */
         footer {
             background: var(--primary);
@@ -287,42 +312,20 @@
             text-align: center;
             border-top: 1px solid #1e293b;
         }
-        footer p { font-size: 15px; }
 
         /* Responsive Breakpoints */
-        @media (max-width: 992px) {
-            .hero h1 { font-size: 42px; }
-            .section-header h2 { font-size: 32px; }
-        }
-
         @media (max-width: 768px) {
             nav { flex-direction: column; gap: 15px; }
             nav ul li { margin: 0 15px; }
             .hero { padding: 140px 0 80px 0; }
             .hero h1 { font-size: 34px; }
             .contact-wrapper { padding: 30px; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+            .whatsapp-icon-svg { width: 26px; height: 26px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Growveda<span>Media</span></div>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#process">Our Process</a></li>
-                    <li><a href="#why-us">Why Us</a></li>
-                    <li><a href="#faq">FAQs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
         <div class="container">
