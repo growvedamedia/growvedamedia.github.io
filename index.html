@@ -1,34 +1,332 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GrowVedaMedia - Digital Marketing Agency</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>Growveda Media | Best Performance & Digital Marketing Agency</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        /* Header & Nav */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+
+        .logo span {
+            color: #ff416c;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff416c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 150px 0 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff416c;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background: #ff4b2b;
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .service-grids {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            padding: 30px;
+            background: #fdfdfd;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            border-top: 4px solid #1e3c72;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-top-color: #ff416c;
+        }
+
+        .service-box h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1e3c72;
+        }
+
+        /* Performance Marketing Highlight Box */
+        .service-box.featured {
+            border-top-color: #ff416c;
+            background: #fff5f7;
+        }
+
+        /* About Us */
+        .about {
+            padding: 80px 0;
+            background: #f4f7f6;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: #fff;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+
+        /* Mobile Responsiveness */
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            nav { flex-direction: column; }
+            nav ul { margin-top: 15px; }
+            .container { width: 90%; }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <div class="container navbar">
-            <div class="logo"><h2>GrowVeda<span>Media</span></h2></div>
+        <div class="container">
             <nav>
+                <div class="logo">Growveda<span>Media</span></div>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Grow Your Business Digitally With GrowVedaMedia</h1>
+            <h1>We Scale Your Business With Data-Driven Marketing</h1>
+            <p>We don't just generate clicks, we deliver sales and maximum ROI. Growveda Media is your one-stop performance marketing and digital growth partner.</p>
+            <a href="#contact" class="btn">Get Free Consultation</a>
         </div>
     </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Premium services tailored to accelerate your business growth</p>
+            </div>
+            <div class="service-grids">
+                <!-- Service 1 -->
+                <div class="service-box featured">
+                    <h3>Performance Marketing</h3>
+                    <p>Through Meta Ads (Facebook & Instagram) and Google Ads, we acquire high-quality leads and drive conversions for your business where every single penny is tracked.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-box">
+                    <h3>Search Engine Optimization (SEO)</h3>
+                    <p>Rank your website on the first page of Google to secure thousands of organic, intent-driven customers daily without any recurring ad spend.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-box">
+                    <h3>Social Media Management</h3>
+                    <p>Strengthen your brand's digital presence, craft compelling high-converting content, and foster meaningful engagement with your target audience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Growveda Media</h2>
+            </div>
+            <div class="about-content">
+                <p>Growveda Media is a modern, result-oriented digital marketing agency. Breaking away from traditional advertising methods, our core focus lies in scaling businesses through precise data analysis and performance-backed marketing strategies. We thoroughly analyze your business objectives to architect customized acquisition funnels that guarantee maximum ROI.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Fill out the form today to discuss your business growth strategy</p>
+            </div>
+            <form class="contact-form" action="https://formspree.io" method="POST">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" required placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label>Your Message / Business Type</label>
+                    <textarea name="message" rows="5" required placeholder="Describe your business goals and requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="border:none; width:100%; cursor:pointer;">Submit Details</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Growveda Media. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
-.container { width: 85%; max-width: 1200px; margin: auto; }
-header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 20px 0; }
-.navbar { display: flex; justify-content: space-between; align-items: center; }
-.logo span { color: #007bff; }
